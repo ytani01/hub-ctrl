@@ -13,7 +13,7 @@ if [ "$1" = "" ]; then
 	exit 1
 fi
 
-if [ "$1" = "off" ]; then
+if [ `echo $1 | tr '[:upper:]' '[:lower:]'` = "off" ]; then
 	OPT_SW="0"
 fi
 
