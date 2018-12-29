@@ -3,6 +3,7 @@ USBポートの電源ON/OFF制御：hub-ctrl
 
 # ◆ 準備
 
+
 ```bash
 $ sudo apt-get install libusb-dev
 $ wget http://www.gniibe.org/oitoite/ac-power-control-by-USB-hub/hub-ctrl.c
@@ -12,8 +13,11 @@ $ sudo cp hub-ctrl-armhf-static /usr/local/bin/hub-ctrl
 
 # ◆ 実行
 
+
 ※ -P 1 ... LANポート
+
 ※ -P 2 ... USB全ポート
+
 ※ 個別ポートの制御は不可
 
 ```bash
