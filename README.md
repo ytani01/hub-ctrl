@@ -12,7 +12,9 @@ $ sudo cp hub-ctrl-armhf-static /usr/local/bin/hub-ctrl
 
 # ◆ 実行
 
-※ -P 1とするとeth0が停止
+※ -P 1 ... LANポート
+※ -P 2 ... USB全ポート
+※ 個別ポートの制御は不可
 
 ```bash
 $ sudo hub-ctrl -h 0 -P 2 -p 0 ... OFF
@@ -22,9 +24,9 @@ $ sudo hub-ctrl -h 0 -P 2 -p 1 ... ON
 # ◆ 参考情報
 
 ```
-         +-------+-------+
- +-----+ | Port2 | Port4 |
- | LAN | +-------+-------+
- +-+ +-+ | port3 | Port5 |
-   +-+   +-------+-------+
+  Port1   -------   -------
+ +-----+ | Port2 | | Port4 |
+ | LAN | |-------| |-------|
+ +--_--+ | port3 | | Port5 |
+          -------   -------
 ```
